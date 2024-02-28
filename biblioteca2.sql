@@ -47,5 +47,16 @@ CREATE TABLE funcionario (
     nome VARCHAR(255) NOT NULL
 );
 
+SELECT livros.titulo, usuario.nome, emprestimos.data_devolucao, emprestimos.data_emprestimo
+FROM livros
+INNER JOIN emprestimos on livros.id = emprestimos.id_livro
+INNER JOIN usuario on usuario.id = emprestimos.id_usuario;
+
+
+
+
+
+
+
 
 
